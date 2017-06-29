@@ -1,27 +1,35 @@
 // global options
-const cameraHeight = 100;
-let viewerOpts = {
-    infoBox: false,
-    timeline: false,
-    navigationHelpButton: false,
-    geocoder: false,
-    baseLayerPicker : false,
-    homeButton: false,
-    animation: false,
-    navigationInstructionsInitiallyVisible: false,
-    clockViewModel: undefined
-};
-let flyToOpts = {
-    duration: 0.1
-};
+const cameraHeight = 300,
+    viewerOpts = {
+        infoBox: false,
+        timeline: false,
+        navigationHelpButton: false,
+        geocoder: false,
+        baseLayerPicker : false,
+        homeButton: false,
+        animation: false,
+        navigationInstructionsInitiallyVisible: false,
+        clockViewModel: undefined
+    },
+    flyToOpts = {
+        duration: 0.1
+    };
+const initialPosition = [-75.166493, 39.9060534, 0],
+    pointId = "mypoint";
+// viewer
 let viewer = new Cesium.Viewer('cesiumContainer', viewerOpts),
     scene = viewer.scene;
+// geojson/topojson data source
+let diamond = Cesium.GeoJsonDataSource.load('../data/diamond.topojson', {
+    stroke: Cesium.Color.RED,
+    fill: Cesium.Color.RED,
+    strokeWidth: 2
+});
+viewer.dataSources.add(diamond);
 // set fps counter
 scene.debugShowFramesPerSecond = true;
 // the point moving on the map
-let initialPosition = [-75.166493, 39.9060534, 0],
-    pointId = "mypoint",
-    point = {
+let point = {
         id: pointId,
         position : Cesium.Cartesian3.fromDegrees(
             initialPosition[0], initialPosition[1], initialPosition[2]
@@ -31,7 +39,7 @@ let initialPosition = [-75.166493, 39.9060534, 0],
             color : Cesium.Color.RED,
             outlineColor : Cesium.Color.WHITE,
             outlineWidth : 2
-    }
+        }
 };
 // initial camera positioning
 viewer.camera.flyTo({
@@ -41,25 +49,24 @@ viewer.camera.flyTo({
 });
 // add point to map
 viewer.entities.add(point);
+// move viewer to point
 viewer.flyTo(point, flyToOpts).then(() => {
-    setTimeout(() => {
-        // leave some time to 1st camera positioning
-        // and start to move point according to data received
-        // from websocket
-        movePoint()
-    }, 3000);
+    // leave some time to 1st camera positioning
+    setTimeout(movePoint(), 3000);
 });
 
 /*
 * Moves the point on the map according to data received from the websocket
-* Data has the following form: [lat, long, direction]
+* A message has the following form:
+* "<lat> <long> <rotation>"
 */
 function movePoint() {
     let port = 9999,
         socket = new WebSocket(`ws://localhost:${port}`);
 
     socket.onopen = function () {
-        socket.send('client connected');
+        // send initial position to server
+        socket.send(`${initialPosition[0]} ${initialPosition[1]} ${initialPosition[2]}`);
     };
 
     socket.onmessage = message => {

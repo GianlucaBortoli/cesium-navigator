@@ -9,11 +9,10 @@ node server.js
 
 Then start the WebSocket server which simulates position & rotation
 ```{r, engine='bash', code_block_name}
-node ws_sender.js
+node ws_sender.js [interval in ms; default is 200]
 ```
 
 After that, go to `http://localhost:8080/app/navigator.html`
 
 ### TODO
-* use geoJSON/topoJSON on the map
 * setup local terrain server
