@@ -1,4 +1,4 @@
-let initialPosition = [-75.166493, 39.9060534];
+let initialPosition = [-75.166493, 39.9060534, 0];
 let viewerOpts = {
     infoBox: false,
     timeline: false,
@@ -14,9 +14,12 @@ let flyToOpts = {
     duration: 0.1
 }
 let viewer = new Cesium.Viewer('cesiumContainer', viewerOpts);
+let pointId = "mypoint";
 let point = {
-    id: "mypoint",
-    position : Cesium.Cartesian3.fromDegrees(initialPosition[0], initialPosition[1]),
+    id: pointId,
+    position : Cesium.Cartesian3.fromDegrees(
+        initialPosition[0], initialPosition[1], initialPosition[2]
+    ),
     point : {
         pixelSize : 5,
         color : Cesium.Color.RED,
@@ -24,7 +27,14 @@ let point = {
         outlineWidth : 2
     }
 };
-viewer.entities.add(point)
+
+viewer.camera.flyTo({
+    destination : Cesium.Cartesian3.fromDegrees(
+        initialPosition[0], initialPosition[1], initialPosition[2] + 100
+    )
+});
+
+viewer.entities.add(point);
 viewer.flyTo(point, flyToOpts).then(() => {
     setTimeout(() => {
         movePoint()
@@ -32,18 +42,23 @@ viewer.flyTo(point, flyToOpts).then(() => {
 });
 
 function movePoint() {
-    let socket = new WebSocket("ws://localhost:9999")
+    let port = 9999,
+        socket = new WebSocket(`ws://localhost:${port}`);
+
     socket.onopen = function () {
         socket.send('client connected');
     };
 
     socket.onmessage = message => {
-        let position = message.data.split(' '),
-            x = position[0],
-            y = position[1]
-        let e = viewer.entities.getById("mypoint");
-        e.position = Cesium.Cartesian3.fromDegrees(position[0], position[1])
-        viewer.flyTo(e, flyToOpts);
+        let received = message.data.split(' '),
+            x = received[0],
+            y = received[1],
+            rotation = received[2]
+        let e = viewer.entities.getById(pointId);
+        e.position = Cesium.Cartesian3.fromDegrees(x, y);
+        //viewer.flyTo(e, flyToOpts);
+        viewer.zoomTo(e);
+        viewer.camera.rotateRight(rotation);
     };
 
     socket.onerror = error => {
