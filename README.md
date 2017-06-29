@@ -1,7 +1,13 @@
 # cesium-navigator
 WebGL navigator using the Cesium framework
 
-### How to start
+### Initial setup
+Install NodeJS & NPM. After that, install the dependencies running
+```{r, engine='bash', code_block_name}
+npm install
+```
+
+### How to run it
 First start the Cesium local development HTTP server
 ```{r, engine='bash', code_block_name}
 node server.js
