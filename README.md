@@ -19,6 +19,3 @@ node ws_sender.js [interval in ms; default is 200]
 ```
 
 After that, go to `http://localhost:8080/app/navigator.html`
-
-### TODO
-* setup local terrain server
