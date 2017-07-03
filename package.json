@@ -31,7 +31,6 @@
   },
   "dependencies": {
     "requirejs": "^2.3.2",
-    "websocket": "^1.0.24",
     "ws": "^3.0.0"
   },
   "devDependencies": {
