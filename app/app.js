@@ -1,3 +1,5 @@
+// move map from keyboard
+addKeyboardShortcuts();
 // global options
 const cameraHeight = 300,
     viewerOpts = {
@@ -15,6 +17,7 @@ const cameraHeight = 300,
     flyToOpts = {
         duration: 0.1
     };
+// initial point position & id
 const initialPosition = [-75.166493, 39.9060534, 10],
     pointId = "mypoint";
 // viewer
@@ -92,4 +95,48 @@ function movePoint() {
     socket.onclose = error => {
         console.log('WebSocket server connection closed');  
     };
+}
+
+/*
+* Kyboard shortcuts
+*/
+function addKeyboardShortcuts() {
+    const zoomAmount = 15,
+        rotateAmount = 5;
+    document.addEventListener('keydown', e => {
+        // 87 -> W
+        // 65 -> A
+        // 83 -> S
+        // 68 -> D
+        // up -> 38
+        // left -> 37
+        // down -> 40
+        // right -> 39
+        // + (add) -> 107
+        // - (sub) -> 109
+        switch(e.keyCode) {
+            case 87:
+            case 38:
+                viewer.camera.moveForward(rotateAmount);
+                break;
+            case 65:
+            case 37:
+                viewer.camera.moveLeft(rotateAmount);
+                break;
+            case 83:
+            case 40:
+                viewer.camera.moveBackward(rotateAmount);
+                break;
+            case 68:
+            case 39:
+                viewer.camera.moveRight(rotateAmount);
+                break;
+            case 107:
+                viewer.camera.zoomIn(zoomAmount);
+                break;
+            case 109:
+                viewer.camera.zoomOut(zoomAmount);
+                break;
+        }
+    });
 }
