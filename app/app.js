@@ -7,6 +7,7 @@ const cameraHeight = 300,
         geocoder: false,
         baseLayerPicker : false,
         homeButton: false,
+        fullscreenButton: false,
         animation: false,
         navigationInstructionsInitiallyVisible: false,
         clockViewModel: undefined
@@ -14,7 +15,7 @@ const cameraHeight = 300,
     flyToOpts = {
         duration: 0.1
     };
-const initialPosition = [-75.166493, 39.9060534, 0],
+const initialPosition = [-75.166493, 39.9060534, 10],
     pointId = "mypoint";
 // viewer
 let viewer = new Cesium.Viewer('cesiumContainer', viewerOpts),
@@ -32,7 +33,7 @@ scene.debugShowFramesPerSecond = true;
 let point = {
         id: pointId,
         position : Cesium.Cartesian3.fromDegrees(
-            initialPosition[0], initialPosition[1], initialPosition[2]
+            initialPosition[0], initialPosition[1], 0
         ),
         point : {
             pixelSize : 5,
@@ -76,8 +77,12 @@ function movePoint() {
             rotation = received[2]
         let e = viewer.entities.getById(pointId);
         e.position = Cesium.Cartesian3.fromDegrees(x, y);
-        viewer.camera.position = Cesium.Cartesian3.fromDegrees(x, y, cameraHeight);
-        viewer.camera.rotateRight(rotation);
+        // move camera towards point
+        let center = Cesium.Cartesian3.fromDegrees(x, y);
+        viewer.camera.lookAt(
+            center,
+            new Cesium.Cartesian3(rotation, -100, 100)
+        );
     };
 
     socket.onerror = error => {

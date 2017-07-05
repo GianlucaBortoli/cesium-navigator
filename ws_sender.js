@@ -14,7 +14,7 @@ wss.on('connection', function connection(ws) {
         x = Number(received[0]),
         y = Number(received[1]),
         rotation = Number(received[2]);
-    console.log(`x: {x}\ny: ${y}\nrotation: ${rotation}`);
+    console.log(`x: ${x}\ny: ${y}\nrotation: ${rotation}`);
     streamPosition(ws, [x, y, rotation]);
   });
 });
@@ -25,12 +25,14 @@ wss.on('connection', function connection(ws) {
 * "<lat> <long> <rotation>"
 */
 function streamPosition(ws, pos) {
-    const toAdd = 0.000005;
-    // send data every INTERVAL cs
+    const posToAdd = 0.000005,
+        rotToAdd = 2;
+    // send data every INTERVAL ms
     setInterval(() => {
-        pos[0] = pos[0] + toAdd;
-        pos[1] = pos[1] + toAdd;
-        console.log(JSON.stringify(pos));
+        pos[0] += posToAdd;
+        pos[1] += posToAdd * 2;
+        pos[2] += rotToAdd;
+        console.log(pos);
         ws.send(`${pos[0]} ${pos[1]} ${pos[2]}`);
     }, INTERVAL)
 }
