@@ -15,7 +15,12 @@ node server.js
 
 Then start the WebSocket server which simulates position & rotation
 ```{r, engine='bash', code_block_name}
-node ws_sender.js [interval in ms; default is 200]
+node ws_sender.js [interval in ms; default is 500]
+```
+
+or using
+```{r, engine='bash', code_block_name}
+./scripts/ws_sender.sh
 ```
 
 After that, go to `http://localhost:8080/app/navigator.html`

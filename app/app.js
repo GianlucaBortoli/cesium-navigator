@@ -1,7 +1,7 @@
 // move map from keyboard
 addKeyboardShortcuts();
 // global options
-const cameraHeight = 700,
+const cameraHeight = 500,
     viewerOpts = {
         infoBox: false,
         timeline: false,
@@ -17,6 +17,7 @@ const cameraHeight = 700,
     flyToOpts = {
         duration: 0.1
     };
+let tile3d = null;
 // initial point position & id
 const initialPosition = [-73.93436193466187, 40.73272228590177, 10],
     pointId = "mypoint";
@@ -40,19 +41,18 @@ let diamond = Cesium.GeoJsonDataSource.load('../data/diamond.topojson', {
     strokeWidth: 2
 });
 viewer.dataSources.add(diamond);
-// set fps counter
+// show fps counter
 scene.debugShowFramesPerSecond = true;
-// the point moving on the map
-let point = {
+// the person moving on the map
+let person = {
         id: pointId,
-        position : Cesium.Cartesian3.fromDegrees(
-            initialPosition[0], initialPosition[1], 0
-        ),
-        point : {
-            pixelSize : 5,
-            color : Cesium.Color.RED,
-            outlineColor : Cesium.Color.WHITE,
-            outlineWidth : 2
+        position : Cesium.Cartesian3.fromDegrees(initialPosition[0], initialPosition[1], 0),
+        cylinder : {
+            length : 15,
+            topRadius : 10,
+            bottomRadius : 10,
+            material : 'images/man.jpg',
+            fill: true
         }
 };
 // initial camera positioning
@@ -62,9 +62,9 @@ viewer.camera.flyTo({
     )
 });
 // add point to map
-viewer.entities.add(point);
+viewer.entities.add(person);
 // move viewer to point
-viewer.flyTo(point, flyToOpts).then(() => {
+viewer.flyTo(person, flyToOpts).then(() => {
     // leave some time to 1st camera positioning
     setTimeout(movePoint(), 3000);
 });
@@ -168,11 +168,12 @@ function handle3d(checkbox) {
 }
 
 function add3dTiles() {
-    viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+    tile3d = new Cesium.Cesium3DTileset({
         url: 'https://beta.cesium.com/api/assets/1461?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkYWJmM2MzNS02OWM5LTQ3OWItYjEyYS0xZmNlODM5ZDNkMTYiLCJpZCI6NDQsImFzc2V0cyI6WzE0NjFdLCJpYXQiOjE0OTkyNjQ3NDN9.vuR75SqPDKcggvUrG_vpx0Av02jdiAxnnB1fNf-9f7s'
-    }));
+    });
+    viewer.scene.primitives.add(tile3d);
 }
 
 function removeAllTiles() {
-    viewer.scene.primitives.removeAll();
+    tile3d.destroy();
 }
