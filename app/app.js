@@ -20,9 +20,18 @@ const cameraHeight = 300,
 // initial point position & id
 const initialPosition = [-75.166493, 39.9060534, 10],
     pointId = "mypoint";
+// reset view goes to initial position
+const resetViewOpts = {};
+resetViewOpts.defaultResetView = new Cesium.Cartographic.fromDegrees(
+    initialPosition[0],
+    initialPosition[1],
+    cameraHeight
+);;
 // viewer
 let viewer = new Cesium.Viewer('cesiumContainer', viewerOpts),
     scene = viewer.scene;
+// extend view with camera & zoom controls
+viewer.extend(Cesium.viewerCesiumNavigationMixin, resetViewOpts);
 // geojson/topojson data source
 let diamond = Cesium.GeoJsonDataSource.load('../data/diamond.topojson', {
     stroke: Cesium.Color.RED,
@@ -108,16 +117,24 @@ function addKeyboardShortcuts() {
         // 65 -> A
         // 83 -> S
         // 68 -> D
-        // up -> 38
-        // left -> 37
-        // down -> 40
-        // right -> 39
-        // + (add) -> 107
-        // - (sub) -> 109
+        // 38 -> up
+        // 37 -> left
+        // 40 -> down
+        // 39 -> right
+        // 81 -> Q
+        // 69 -> E
+        // 107 -> + (add)
+        // 109 -> - (sub)
         switch(e.keyCode) {
             case 87:
             case 38:
                 viewer.camera.moveForward(rotateAmount);
+                break;
+            case 81:
+                viewer.camera.moveUp(rotateAmount);
+                break;
+            case 69:
+                viewer.camera.moveDown(rotateAmount);
                 break;
             case 65:
             case 37:
