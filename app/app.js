@@ -1,7 +1,7 @@
 // move map from keyboard
 addKeyboardShortcuts();
 // global options
-const cameraHeight = 300,
+const cameraHeight = 700,
     viewerOpts = {
         infoBox: false,
         timeline: false,
@@ -18,7 +18,7 @@ const cameraHeight = 300,
         duration: 0.1
     };
 // initial point position & id
-const initialPosition = [-75.166493, 39.9060534, 10],
+const initialPosition = [-73.93436193466187, 40.73272228590177, 10],
     pointId = "mypoint";
 // reset view goes to initial position
 const commandOpts = {};
@@ -94,7 +94,7 @@ function movePoint() {
         let center = Cesium.Cartesian3.fromDegrees(x, y);
         viewer.camera.lookAt(
             center,
-            new Cesium.Cartesian3(rotation, -100, 100)
+            new Cesium.Cartesian3(rotation, -cameraHeight, cameraHeight)
         );
     };
 

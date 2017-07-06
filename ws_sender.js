@@ -26,7 +26,7 @@ wss.on('connection', function connection(ws) {
 */
 function streamPosition(ws, pos) {
     const posToAdd = 0.000005,
-        rotToAdd = 2;
+        rotToAdd = 1;
     // send data every INTERVAL ms
     setInterval(() => {
         pos[0] += posToAdd;
