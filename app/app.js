@@ -21,17 +21,18 @@ const cameraHeight = 300,
 const initialPosition = [-75.166493, 39.9060534, 10],
     pointId = "mypoint";
 // reset view goes to initial position
-const resetViewOpts = {};
-resetViewOpts.defaultResetView = new Cesium.Cartographic.fromDegrees(
+const commandOpts = {};
+commandOpts.defaultResetView = new Cesium.Cartographic.fromDegrees(
     initialPosition[0],
     initialPosition[1],
     cameraHeight
-);;
+);
+commandOpts.enableDistanceLegend = false;
 // viewer
 let viewer = new Cesium.Viewer('cesiumContainer', viewerOpts),
     scene = viewer.scene;
 // extend view with camera & zoom controls
-viewer.extend(Cesium.viewerCesiumNavigationMixin, resetViewOpts);
+viewer.extend(Cesium.viewerCesiumNavigationMixin, commandOpts);
 // geojson/topojson data source
 let diamond = Cesium.GeoJsonDataSource.load('../data/diamond.topojson', {
     stroke: Cesium.Color.RED,
@@ -156,4 +157,22 @@ function addKeyboardShortcuts() {
                 break;
         }
     });
+}
+
+function handle3d(checkbox) {
+    if (checkbox.checked) {
+        add3dTiles();
+    } else {
+        removeAllTiles();
+    }
+}
+
+function add3dTiles() {
+    viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+        url: 'https://beta.cesium.com/api/assets/1461?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkYWJmM2MzNS02OWM5LTQ3OWItYjEyYS0xZmNlODM5ZDNkMTYiLCJpZCI6NDQsImFzc2V0cyI6WzE0NjFdLCJpYXQiOjE0OTkyNjQ3NDN9.vuR75SqPDKcggvUrG_vpx0Av02jdiAxnnB1fNf-9f7s'
+    }));
+}
+
+function removeAllTiles() {
+    viewer.scene.primitives.removeAll();
 }

@@ -33,10 +33,27 @@
         #cesiumContainer .cesium-viewer-bottom {
             display: none;
         }
+
+        #toolbar {
+            margin: 5px;
+            padding: 2px 5px;
+            position: absolute;
+        }
+
+        .infoPanel {
+            background: rgba(42, 42, 42, 0.8);
+            padding: 4px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div id="cesiumContainer"></div>
+    <div id="toolbar" class="infoPanel">
+        <input type="checkbox" name="handle3d" onclick="handle3d(this)"> 3D tiles
+    </div>
     <script src="./app.js"></script>
 </body>
 </html>
