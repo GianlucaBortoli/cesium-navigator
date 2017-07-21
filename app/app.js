@@ -1,9 +1,15 @@
 /*
 * WEB TRACING FRAMEWORK
 */
-var options = {/* options, if any */};
+var options = {
+    'wtf.trace.provider.webgl': true,
+    'wtf.trace.provider.webgl.recordAtStartup': true,
+    'wtf.trace.provider.webgl.replayable': true,
+    'wtf.trace.provider.webgl.embedRemoteImages': false,
+    'wtf.trace.provider.webworker': true,
+    'wtf.trace.provider.webworker.inject': true
+};
 wtf.trace.prepare(options);
-//wtf.hud.prepare(options);
 
 /*
 * CESIUM APPLICATION
@@ -45,12 +51,12 @@ let viewer = new Cesium.Viewer('cesiumContainer', viewerOpts),
 // extend view with camera & zoom controls
 viewer.extend(Cesium.viewerCesiumNavigationMixin, commandOpts);
 // geojson/topojson data source
-let diamond = Cesium.GeoJsonDataSource.load('../data/diamond.topojson', {
+/*let diamond = Cesium.GeoJsonDataSource.load('../data/diamond.topojson', {
     stroke: Cesium.Color.RED,
     fill: Cesium.Color.RED,
     strokeWidth: 2
 });
-viewer.dataSources.add(diamond);
+viewer.dataSources.add(diamond);*/
 // show fps counter
 scene.debugShowFramesPerSecond = true;
 // the person moving on the map
@@ -65,6 +71,18 @@ let person = {
             fill: true
         }
 };
+/*let person = {
+        id: pointId,
+        position : Cesium.Cartesian3.fromDegrees(
+            initialPosition[0], initialPosition[1], 0
+        ),
+        point : {
+            pixelSize : 5,
+            color : Cesium.Color.RED,
+            outlineColor : Cesium.Color.WHITE,
+            outlineWidth : 2
+        }
+};*/
 // initial camera positioning
 viewer.camera.flyTo({
     destination : Cesium.Cartesian3.fromDegrees(
