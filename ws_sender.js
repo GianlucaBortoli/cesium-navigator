@@ -3,9 +3,11 @@ const WebSocket = require('ws'),
     wss = new WebSocket.Server({ port: wsPort });
 
 const INTERVAL = process.argv[2] || 500; // in milliseconds
+const NUM_POSITION = process.argv[3] || 50; // the # of positions to be sent
 
 console.log(`WebSocket server listening on port ${wsPort}`);
-console.log(`Interval: ${INTERVAL}`)
+console.log(`Interval: ${INTERVAL}`);
+console.log(`Sending ${NUM_POSITION} position(s)`);
 
 /*
 * The main ws loop
@@ -34,17 +36,25 @@ function main() {
 function streamPosition(ws, pos) {
     const posToAdd = 0.000005,
         rotToAdd = 1;
+    let duePositions = NUM_POSITION;
     // send data every INTERVAL ms
-    setInterval(() => {
+    let streamInterval = setInterval(() => {
         pos[0] += posToAdd;
         pos[1] += posToAdd * 2;
         pos[2] += rotToAdd;
-        //console.log(pos);
+
         ws.send(`${pos[0]} ${pos[1]} ${pos[2]}`, err => {
+            duePositions--;
             if (err) {
                 console.log("Error", err);
                 console.log("Exting");
                 process.exit(1);
+            }
+            // stop sending data when done
+            if (duePositions === 0) {
+                console.log('Stopped sending position');
+                clearInterval(streamInterval);
+                process.exit(0);
             }
         });
     }, INTERVAL);

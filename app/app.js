@@ -1,3 +1,13 @@
+/*
+* WEB TRACING FRAMEWORK
+*/
+var options = {/* options, if any */};
+wtf.trace.prepare(options);
+//wtf.hud.prepare(options);
+
+/*
+* CESIUM APPLICATION
+*/
 // move map from keyboard
 addKeyboardShortcuts();
 // global options
@@ -81,6 +91,8 @@ function movePoint() {
     socket.onopen = function () {
         // send initial position to server
         socket.send(`${initialPosition[0]} ${initialPosition[1]} ${initialPosition[2]}`);
+        // start profiling
+        wtf.trace.start();
     };
 
     socket.onmessage = message => {
@@ -103,7 +115,9 @@ function movePoint() {
     };
 
     socket.onclose = error => {
-        console.log('WebSocket server connection closed');  
+        wtf.trace.snapshot('file://trace')
+        wtf.trace.stop();
+        console.log('WebSocket server connection closed');
     };
 }
 
