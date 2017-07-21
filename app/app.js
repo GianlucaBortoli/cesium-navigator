@@ -60,7 +60,7 @@ viewer.dataSources.add(diamond);*/
 // show fps counter
 scene.debugShowFramesPerSecond = true;
 // the person moving on the map
-let person = {
+/*let person = {
         id: pointId,
         position : Cesium.Cartesian3.fromDegrees(initialPosition[0], initialPosition[1], 0),
         cylinder : {
@@ -70,8 +70,8 @@ let person = {
             material : 'images/man.jpg',
             fill: true
         }
-};
-/*let person = {
+};*/
+let person = {
         id: pointId,
         position : Cesium.Cartesian3.fromDegrees(
             initialPosition[0], initialPosition[1], 0
@@ -82,7 +82,7 @@ let person = {
             outlineColor : Cesium.Color.WHITE,
             outlineWidth : 2
         }
-};*/
+};
 // initial camera positioning
 viewer.camera.flyTo({
     destination : Cesium.Cartesian3.fromDegrees(
