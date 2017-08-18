@@ -4,10 +4,12 @@ const WebSocket = require('ws'),
 
 const INTERVAL = process.argv[2] || 500; // in milliseconds
 const NUM_POSITION = process.argv[3] || 50; // the # of positions to be sent
+const MOVE_POINT = process.argv[4] || true; // if the point has move or not
 
 console.log(`WebSocket server listening on port ${wsPort}`);
 console.log(`Interval: ${INTERVAL}`);
 console.log(`Sending ${NUM_POSITION} position(s)`);
+console.log(`Point moving: ${MOVE_POINT}`);
 
 /*
 * The main ws loop
@@ -34,8 +36,12 @@ function main() {
 * "<lat> <long> <rotation>"
 */
 function streamPosition(ws, pos) {
-    const posToAdd = 0.000005,
+    let posToAdd = rotToAdd = 0;
+    if (MOVE_POINT) {
+        posToAdd = 0.000005;
         rotToAdd = 1;
+    }
+
     let duePositions = NUM_POSITION;
     // send data every INTERVAL ms
     let streamInterval = setInterval(() => {
