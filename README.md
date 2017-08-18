@@ -20,7 +20,7 @@ node server.js
 
 Then start the WebSocket server which simulates position & rotation
 ```{r, engine='bash', code_block_name}
-node ws_sender.js [interval in ms; default is 500]
+node ws_sender.js [interval in ms] [# of sent points] [move sent points]
 ```
 
 or using
