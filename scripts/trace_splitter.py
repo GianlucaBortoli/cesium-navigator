@@ -7,7 +7,6 @@ import sys
 
 
 def main(args):
-    print args.function
     if (not args.splitCsv and not args.showChart):
         print 'No option selected. Use the -h flag to see a help message'
         sys.exit(1)
