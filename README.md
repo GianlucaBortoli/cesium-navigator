@@ -6,6 +6,11 @@ Install NodeJS & NPM. After that, install the dependencies running
 ```{r, engine='bash', code_block_name}
 npm install
 ```
+Install the python2 requirements for the analysis scripts using `pip` running
+```{r, engine='bash', code_block_name}
+pip install -r requirements.txt
+```
+The python requirements are **not** necessary to run the navigator app.
 
 ### How to run it
 First start the Cesium local development HTTP server
