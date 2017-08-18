@@ -1,0 +1,234 @@
+Time,Value,"Total Time","Own Time",Depth,Arguments
+8951.445,WebGLRenderingContext#bindBuffer,0.39,0.39,0,target=34962, buffer=15
+8952.005,WebGLRenderingContext#bufferSubData,0.325,0.325,0,target=34962, offset=0, data=142,91,152,73,4,19,141,202,59,45,128,74,196,223,155,73,124,32,144,202,180,249,120,74,54,27,171,73,117,185,139,202,59,45,128,74,107,159,174,73,237,198,142,202,180,249,120,74
+8952.355,WebGLRenderingContext#bindBuffer,0.015,0.015,0,target=34962, buffer=0
+8952.42,WebGLRenderingContext#disable,0.015,0.015,0,cap=3089
+8952.445,WebGLRenderingContext#viewport,0.025,0.025,0,x=0, y=0, width=1518, height=727
+8952.475,WebGLRenderingContext#clear,0.045,0.045,0,mask=17408
+8952.545,WebGLRenderingContext#disable,0.02,0.02,0,cap=3089
+8952.575,WebGLRenderingContext#bindFramebuffer,0.015,0.015,0,target=36160, framebuffer=21
+8952.595,WebGLRenderingContext#clear,0.015,0.015,0,mask=17408
+8952.635,WebGLRenderingContext#disable,0,0,0,cap=3089
+8952.645,WebGLRenderingContext#clear,0,0,0,mask=16384
+8952.655,WebGLRenderingContext#clearColor,0.015,0.015,0,red=0, green=0, blue=0, alpha=0
+8952.675,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+8952.685,WebGLRenderingContext#bindFramebuffer,0.015,0.015,0,target=36160, framebuffer=28
+8952.705,WebGLRenderingContext#clear,0.005,0.005,0,mask=16384
+8952.715,WebGLRenderingContext#clearColor,0.01,0.01,0,red=1, green=1, blue=1, alpha=1
+8952.735,WebGLRenderingContext#disable,0,0,0,cap=3089
+8952.74,WebGLRenderingContext#bindFramebuffer,0.04,0.04,0,target=36160, framebuffer=29
+8952.79,WebGLRenderingContext#clear,0,0,0,mask=16384
+8952.805,WebGLRenderingContext#clearColor,0.005,0.005,0,red=0, green=0, blue=0, alpha=1
+8952.815,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+8952.92,WebGLRenderingContext#bindFramebuffer,0.01,0.01,0,target=36160, framebuffer=34
+8952.935,WebGLRenderingContext#clear,0,0,0,mask=16640
+8952.945,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+8952.955,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=21
+8952.965,WebGLRenderingContext#clear,0,0,0,mask=17408
+8953.055,WebGLRenderingContext#createTexture,0.015,0.015,0,texture=139
+8953.095,WebGLRenderingContext#activeTexture,0.01,0.01,0,texture=33984
+8953.11,WebGLRenderingContext#bindTexture,0.015,0.015,0,target=3553, texture=139
+8953.13,WebGLRenderingContext#pixelStorei,0.02,0.02,0,pname=37441, param=0
+8953.15,WebGLRenderingContext#pixelStorei,0.025,0.025,0,pname=37440, param=1
+8953.255,WebGLRenderingContext#texImage2D,13.14,13.14,0,target=3553, level=0, internalformat=6408, width=1024, height=1024, border=0, format=6408, type=5121, pixels=, dataType='http://localhost:8080/app/images/man.jpg'
+8966.41,WebGLRenderingContext#bindTexture,0.04,0.04,0,target=3553, texture=0
+8966.475,WebGLRenderingContext#activeTexture,0.01,0.01,0,texture=33984
+8966.49,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=139
+8966.5,WebGLRenderingContext#texParameteri,0.025,0.025,0,target=3553, pname=10241, param=9729
+8966.525,WebGLRenderingContext#texParameteri,0.01,0.01,0,target=3553, pname=10240, param=9729
+8966.54,WebGLRenderingContext#texParameteri,0,0,0,target=3553, pname=10242, param=33071
+8966.545,WebGLRenderingContext#texParameteri,0.005,0.005,0,target=3553, pname=10243, param=33071
+8966.55,WebGLRenderingContext#texParameteri,0.005,0.005,0,target=3553, pname=34046, param=1
+8966.56,WebGLRenderingContext#bindTexture,0,0,0,target=3553, texture=0
+8966.835,WebGLRenderingContext#disable,0.01,0.01,0,cap=3089
+8966.85,WebGLRenderingContext#clear,0.005,0.005,0,mask=256
+8966.865,WebGLRenderingContext#disable,0,0,0,cap=3089
+8966.87,WebGLRenderingContext#clear,0.005,0.005,0,mask=256
+8966.885,WebGLRenderingContext#enable,0.025,0.025,0,cap=2884
+8966.915,WebGLRenderingContext#cullFace,0.015,0.015,0,mode=1029
+8966.935,WebGLRenderingContext#enable,0.01,0.01,0,cap=2929
+8966.95,WebGLRenderingContext#depthFunc,0.01,0.01,0,func=519
+8966.965,WebGLRenderingContext#colorMask,0.02,0.02,0,red=0, green=0, blue=0, alpha=0
+8966.985,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+8966.995,WebGLRenderingContext#viewport,0.015,0.015,0,x=0, y=0, width=1518, height=727
+8967.015,WebGLRenderingContext#useProgram,0.015,0.015,0,program=123
+8967.065,WebGLRenderingContext#uniformMatrix4fv,0.03,0.03,0,location=124, transpose=0, value=0.9609453082084656,0.27673840522766113,-1.6653345369377348e-16,0,-0.1805805116891861,0.627047061920166,0.7577615976333618,0,0.20970173180103302,-0.7281674742698669,0.6525314450263977,0,1339521.875,-4651350.5,4140303.25,1
+8967.1,WebGLRenderingContext#uniformMatrix4fv,0.025,0.025,0,location=125, transpose=0, value=0.9609453082084656,-0.1805805116891861,0.20970173180103302,0,0.27673840522766113,0.627047061920166,-0.7281674742698669,0,-1.6653345369377348e-16,0.7577615976333618,0.6525314450263977,0,-9.403154921372447e-10,21144.24609375,-6369540,1
+8967.13,WebGLRenderingContext#uniformMatrix4fv,0.01,0.01,0,location=126, transpose=0, value=0.9609453082084656,-0.1805805116891861,0.20970173180103302,0,0.27673840522766113,0.627047061920166,-0.7281674742698669,0,-1.6653345369377348e-16,0.7577615976333618,0.6525314450263977,0,-9.403154921372447e-10,21144.24609375,-6369540,1
+8967.145,WebGLRenderingContext#uniformMatrix4fv,0.005,0.005,0,location=127, transpose=0, value=1.7320507764816284,0,0,0,0,3.616579294204712,0,0,0,0,-40,-1,0,0,-19987.5,0
+8967.185,WebGLRenderingContext#drawElements,0.02,0.02,0,mode=4, count=6, type=5123, offset=0
+8967.235,WebGLRenderingContext#enable,0.005,0.005,0,cap=2929
+8967.24,WebGLRenderingContext#depthFunc,0.01,0.01,0,func=513
+8967.255,WebGLRenderingContext#colorMask,0.02,0.02,0,red=1, green=1, blue=1, alpha=1
+8967.28,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+8967.29,WebGLRenderingContext#viewport,0.005,0.005,0,x=0, y=0, width=1518, height=727
+8967.3,WebGLRenderingContext#useProgram,0.01,0.01,0,program=105
+8967.405,WebGLRenderingContext#uniform3f,0.025,0.025,0,location=107, x=0.8958935737609863, y=0.42027410864830017, z=-0.14402927458286285
+8967.435,WebGLRenderingContext#uniform3f,0.015,0.015,0,location=108, x=0.86245197057724, y=0.0018966569332405925, z=0.5061354041099548
+8967.46,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33984
+8967.47,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=139
+8967.495,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33985
+8967.505,WebGLRenderingContext#bindTexture,0,0,0,target=3553, texture=54
+8967.515,WebGLRenderingContext#uniformMatrix4fv,0.005,0.005,0,location=116, transpose=0, value=0.9609453082084656,-0.1805805116891861,0.20970173180103302,0,0.27673840522766113,0.627047061920166,-0.7281674742698669,0,-1.6653345369377348e-16,0.7577615976333618,0.6525314450263977,0,0,0,0,1
+8967.53,WebGLRenderingContext#uniformMatrix3fv,0.025,0.025,0,location=117, transpose=0, value=0.9609453082084656,-0.1805805116891861,0.20970173180103302,0.27673840522766113,0.627047061920166,-0.7281674742698669,-1.6653345369377348e-16,0.7577615976333618,0.6525314450263977
+8967.56,WebGLRenderingContext#uniformMatrix4fv,0.01,0.01,0,location=118, transpose=0, value=1.6644060611724854,-0.6530837416648865,-8.388069152832031,-0.20970173180103302,0.47932496666908264,2.2677652835845947,29.126699447631836,0.7281674742698669,-2.8844439116302277e-16,2.7405049800872803,-26.101259231567383,-0.6525314450263977,0,0,-19987.5,0
+8967.585,WebGLRenderingContext#drawElements,0.02,0.02,0,mode=4, count=1524, type=5123, offset=0
+8967.63,WebGLRenderingContext#bindFramebuffer,0.01,0.01,0,target=36160, framebuffer=30
+8967.65,WebGLRenderingContext#disable,0.005,0.005,0,cap=2884
+8967.66,WebGLRenderingContext#disable,0,0,0,cap=2929
+8967.665,WebGLRenderingContext#disable,0,0,0,cap=3089
+8967.675,WebGLRenderingContext#viewport,0,0,0,x=0, y=0, width=1518, height=727
+8967.68,WebGLRenderingContext#useProgram,0.005,0.005,0,program=130
+8967.7,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33984
+8967.705,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=19
+8967.715,WebGLRenderingContext#uniform4f,0.035,0.035,0,location=132, x=0, y=0, z=0, w=0
+8967.765,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=6, type=5123, offset=0
+8967.785,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=31
+8967.8,WebGLRenderingContext#useProgram,0,0,0,program=130
+8967.81,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33984
+8967.82,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=19
+8967.83,WebGLRenderingContext#uniform4f,0.015,0.015,0,location=132, x=1, y=1, z=1, w=1
+8967.855,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=6, type=5123, offset=0
+8967.895,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=134
+8967.905,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+8967.915,WebGLRenderingContext#viewport,0.005,0.005,0,x=0, y=0, width=1518, height=727
+8967.925,WebGLRenderingContext#useProgram,0.005,0.005,0,program=137
+8967.935,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33984
+8967.945,WebGLRenderingContext#bindTexture,0,0,0,target=3553, texture=19
+8967.96,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=6, type=5123, offset=0
+8967.98,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=34
+8967.99,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+8968,WebGLRenderingContext#viewport,0.005,0.005,0,x=0, y=0, width=1518, height=727
+8968.005,WebGLRenderingContext#useProgram,0.005,0.005,0,program=42
+8968.025,WebGLRenderingContext#activeTexture,0,0,0,texture=33984
+8968.03,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=18
+8968.04,WebGLRenderingContext#activeTexture,0,0,0,texture=33985
+8968.045,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=26
+8968.05,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33986
+8968.055,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=27
+8968.075,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=6, type=5123, offset=0
+8968.095,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=0
+8968.105,WebGLRenderingContext#useProgram,0.005,0.005,0,program=49
+8968.12,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33984
+8968.13,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=32
+8968.15,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=6, type=5123, offset=0
+8968.3,WebGLRenderingContext#useProgram,0.01,0.01,0,program=0
+8968.315,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=0
+8968.325,WebGLRenderingContext#activeTexture,0,0,0,texture=33984
+8968.33,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=0
+8968.335,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=34067, texture=0
+8968.34,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33985
+8968.35,WebGLRenderingContext#bindTexture,0,0,0,target=3553, texture=0
+8968.355,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=34067, texture=0
+8968.36,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33986
+8968.365,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=0
+8968.37,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=34067, texture=0
+9451.95,WebGLRenderingContext#bindBuffer,0.035,0.035,0,target=34962, buffer=15
+9452.01,WebGLRenderingContext#bufferSubData,0.035,0.035,0,target=34962, offset=0, data=142,91,152,73,4,19,141,202,59,45,128,74,196,223,155,73,124,32,144,202,180,249,120,74,54,27,171,73,117,185,139,202,59,45,128,74,107,159,174,73,237,198,142,202,180,249,120,74
+9452.05,WebGLRenderingContext#bindBuffer,0.005,0.005,0,target=34962, buffer=0
+9452.09,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+9452.105,WebGLRenderingContext#viewport,0,0,0,x=0, y=0, width=1518, height=727
+9452.11,WebGLRenderingContext#clear,0.04,0.04,0,mask=17408
+9452.175,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+9452.19,WebGLRenderingContext#bindFramebuffer,0.01,0.01,0,target=36160, framebuffer=21
+9452.205,WebGLRenderingContext#clear,0,0,0,mask=17408
+9452.23,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+9452.24,WebGLRenderingContext#clear,0.005,0.005,0,mask=16384
+9452.255,WebGLRenderingContext#clearColor,0.005,0.005,0,red=0, green=0, blue=0, alpha=0
+9452.265,WebGLRenderingContext#disable,0,0,0,cap=3089
+9452.275,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=28
+9452.285,WebGLRenderingContext#clear,0.005,0.005,0,mask=16384
+9452.295,WebGLRenderingContext#clearColor,0.005,0.005,0,red=1, green=1, blue=1, alpha=1
+9452.305,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+9452.315,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=29
+9452.325,WebGLRenderingContext#clear,0.005,0.005,0,mask=16384
+9452.35,WebGLRenderingContext#clearColor,0.005,0.005,0,red=0, green=0, blue=0, alpha=1
+9452.36,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+9452.37,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=34
+9452.38,WebGLRenderingContext#clear,0.005,0.005,0,mask=16640
+9452.395,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+9452.405,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=21
+9452.41,WebGLRenderingContext#clear,0.005,0.005,0,mask=17408
+9452.635,WebGLRenderingContext#disable,0,0,0,cap=3089
+9452.64,WebGLRenderingContext#clear,0.005,0.005,0,mask=256
+9452.65,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+9452.66,WebGLRenderingContext#clear,0,0,0,mask=256
+9452.67,WebGLRenderingContext#enable,0.005,0.005,0,cap=2884
+9452.68,WebGLRenderingContext#cullFace,0.02,0.02,0,mode=1029
+9452.705,WebGLRenderingContext#enable,0.005,0.005,0,cap=2929
+9452.71,WebGLRenderingContext#depthFunc,0.005,0.005,0,func=519
+9452.72,WebGLRenderingContext#colorMask,0.005,0.005,0,red=0, green=0, blue=0, alpha=0
+9452.73,WebGLRenderingContext#disable,0,0,0,cap=3089
+9452.735,WebGLRenderingContext#viewport,0.005,0.005,0,x=0, y=0, width=1518, height=727
+9452.745,WebGLRenderingContext#useProgram,0.005,0.005,0,program=123
+9452.81,WebGLRenderingContext#uniformMatrix4fv,0.02,0.02,0,location=124, transpose=0, value=0.9609453082084656,0.27673840522766113,-1.6653345369377348e-16,0,-0.1805805116891861,0.627047061920166,0.7577615976333618,0,0.20970173180103302,-0.7281674742698669,0.6525314450263977,0,1339521.875,-4651350.5,4140303.25,1
+9452.835,WebGLRenderingContext#uniformMatrix4fv,0.02,0.02,0,location=125, transpose=0, value=0.9609453082084656,-0.1805805116891861,0.20970173180103302,0,0.27673840522766113,0.627047061920166,-0.7281674742698669,0,-1.6653345369377348e-16,0.7577615976333618,0.6525314450263977,0,-9.403154921372447e-10,21144.24609375,-6369540,1
+9452.86,WebGLRenderingContext#uniformMatrix4fv,0.005,0.005,0,location=126, transpose=0, value=0.9609453082084656,-0.1805805116891861,0.20970173180103302,0,0.27673840522766113,0.627047061920166,-0.7281674742698669,0,-1.6653345369377348e-16,0.7577615976333618,0.6525314450263977,0,-9.403154921372447e-10,21144.24609375,-6369540,1
+9452.87,WebGLRenderingContext#uniformMatrix4fv,0.005,0.005,0,location=127, transpose=0, value=1.7320507764816284,0,0,0,0,3.616579294204712,0,0,0,0,-40,-1,0,0,-19987.5,0
+9452.89,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=6, type=5123, offset=0
+9452.92,WebGLRenderingContext#enable,0.005,0.005,0,cap=2929
+9452.925,WebGLRenderingContext#depthFunc,0.005,0.005,0,func=513
+9452.935,WebGLRenderingContext#colorMask,0.005,0.005,0,red=1, green=1, blue=1, alpha=1
+9452.945,WebGLRenderingContext#disable,0,0,0,cap=3089
+9452.955,WebGLRenderingContext#viewport,0.005,0.005,0,x=0, y=0, width=1518, height=727
+9452.965,WebGLRenderingContext#useProgram,0.005,0.005,0,program=105
+9453.045,WebGLRenderingContext#uniform3f,0.005,0.005,0,location=107, x=0.8959075212478638, y=0.42025279998779297, z=-0.14400456845760345
+9453.055,WebGLRenderingContext#uniform3f,0.005,0.005,0,location=108, x=0.8624386191368103, y=0.0018769728485494852, z=0.5061582326889038
+9453.065,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33984
+9453.075,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=139
+9453.095,WebGLRenderingContext#activeTexture,0,0,0,texture=33985
+9453.1,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=54
+9453.11,WebGLRenderingContext#uniformMatrix4fv,0.01,0.01,0,location=116, transpose=0, value=0.9609453082084656,-0.1805805116891861,0.20970173180103302,0,0.27673840522766113,0.627047061920166,-0.7281674742698669,0,-1.6653345369377348e-16,0.7577615976333618,0.6525314450263977,0,0,0,0,1
+9453.125,WebGLRenderingContext#uniformMatrix3fv,0.03,0.03,0,location=117, transpose=0, value=0.9609453082084656,-0.1805805116891861,0.20970173180103302,0.27673840522766113,0.627047061920166,-0.7281674742698669,-1.6653345369377348e-16,0.7577615976333618,0.6525314450263977
+9453.16,WebGLRenderingContext#uniformMatrix4fv,0.005,0.005,0,location=118, transpose=0, value=1.6644060611724854,-0.6530837416648865,-8.388069152832031,-0.20970173180103302,0.47932496666908264,2.2677652835845947,29.126699447631836,0.7281674742698669,-2.8844439116302277e-16,2.7405049800872803,-26.101259231567383,-0.6525314450263977,0,0,-19987.5,0
+9453.19,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=1524, type=5123, offset=0
+9453.21,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=30
+9453.22,WebGLRenderingContext#disable,0,0,0,cap=2884
+9453.22,WebGLRenderingContext#disable,0.005,0.005,0,cap=2929
+9453.225,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+9453.235,WebGLRenderingContext#viewport,0,0,0,x=0, y=0, width=1518, height=727
+9453.24,WebGLRenderingContext#useProgram,0,0,0,program=130
+9453.25,WebGLRenderingContext#activeTexture,0,0,0,texture=33984
+9453.255,WebGLRenderingContext#bindTexture,0,0,0,target=3553, texture=19
+9453.26,WebGLRenderingContext#uniform4f,0.005,0.005,0,location=132, x=0, y=0, z=0, w=0
+9453.295,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=6, type=5123, offset=0
+9453.305,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=31
+9453.31,WebGLRenderingContext#useProgram,0.005,0.005,0,program=130
+9453.32,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33984
+9453.325,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=19
+9453.335,WebGLRenderingContext#uniform4f,0.005,0.005,0,location=132, x=1, y=1, z=1, w=1
+9453.35,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=6, type=5123, offset=0
+9453.375,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=134
+9453.385,WebGLRenderingContext#disable,0.005,0.005,0,cap=3089
+9453.395,WebGLRenderingContext#viewport,0,0,0,x=0, y=0, width=1518, height=727
+9453.4,WebGLRenderingContext#useProgram,0.005,0.005,0,program=137
+9453.415,WebGLRenderingContext#activeTexture,0,0,0,texture=33984
+9453.42,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=19
+9453.435,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=6, type=5123, offset=0
+9453.455,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=34
+9453.465,WebGLRenderingContext#disable,0,0,0,cap=3089
+9453.47,WebGLRenderingContext#viewport,0.005,0.005,0,x=0, y=0, width=1518, height=727
+9453.48,WebGLRenderingContext#useProgram,0,0,0,program=42
+9453.495,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33984
+9453.505,WebGLRenderingContext#bindTexture,0,0,0,target=3553, texture=18
+9453.51,WebGLRenderingContext#activeTexture,0,0,0,texture=33985
+9453.515,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=26
+9453.52,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33986
+9453.525,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=27
+9453.545,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=6, type=5123, offset=0
+9453.56,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=0
+9453.575,WebGLRenderingContext#useProgram,0,0,0,program=49
+9453.585,WebGLRenderingContext#activeTexture,0.005,0.005,0,texture=33984
+9453.59,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=32
+9453.61,WebGLRenderingContext#drawElements,0.005,0.005,0,mode=4, count=6, type=5123, offset=0
+9453.72,WebGLRenderingContext#useProgram,0.005,0.005,0,program=0
+9453.73,WebGLRenderingContext#bindFramebuffer,0.005,0.005,0,target=36160, framebuffer=0
+9453.74,WebGLRenderingContext#activeTexture,0,0,0,texture=33984
+9453.745,WebGLRenderingContext#bindTexture,0,0,0,target=3553, texture=0
+9453.75,WebGLRenderingContext#bindTexture,0,0,0,target=34067, texture=0
+9453.755,WebGLRenderingContext#activeTexture,0.025,0.025,0,texture=33985
+9453.785,WebGLRenderingContext#bindTexture,0.005,0.005,0,target=3553, texture=0
+9453.79,WebGLRenderingContext#bindTexture,0,0,0,target=34067, texture=0
+9453.795,WebGLRenderingContext#activeTexture,0,0,0,texture=33986
+9453.8,WebGLRenderingContext#bindTexture,0,0,0,target=3553, texture=0
+9453.805,WebGLRenderingContext#bindTexture,0,0,0,target=34067, texture=0
