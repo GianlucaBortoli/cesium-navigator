@@ -54,7 +54,7 @@ def show_chart(file, functionName):
         assert len(arrivalTimes) == len(elapsedTimes)
         fig = plt.figure()
         ax = fig.add_subplot(111)
-        ax.set_title('bingBuffer elapsed times')
+        ax.set_title('"{}" elapsed times'.format(functionName.split('#')[1]))
         ax.set_xlabel('time from application startup (ms)')
         ax.set_ylabel('time from previous call (ms)')
         ax.bar(arrivalTimes, elapsedTimes)
