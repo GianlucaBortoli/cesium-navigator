@@ -66,9 +66,5 @@ function streamPosition(ws, pos) {
     }, INTERVAL);
 }
 
-function degToRad(degrees) {
-    return degrees * Math.PI / 180;
-}
-
 // main
 main();
