@@ -2,6 +2,9 @@
 WebGL navigator using the Cesium framework
 
 ### Initial setup
+Before cloning the repository follow the [instructions](https://help.github.com/articles/installing-git-large-file-storage/) to install Git LFS.
+This extension is used to store some quite big (trace) file inside the repo. After this preliminary procedure a normal `git clone` works as expected.
+
 Install NodeJS & NPM. After that, install the dependencies running
 ```{r, engine='bash', code_block_name}
 npm install
