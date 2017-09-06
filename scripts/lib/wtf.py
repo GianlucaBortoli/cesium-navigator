@@ -4,6 +4,21 @@ from os import path
 import csv
 
 
+# WebGL function 2 groups mapping
+INIT = [
+    'bindBuffer', 'bindFramebuffer', 'enable', 'disable',
+    'viewport', 'clear', 'clearColor', 'cullFace',
+    'depthCompare', 'useProgram', 'colorMask',
+]
+MODIFY = [
+    'uniformMatrix3fv', 'uniformMatrix4fv', 'uniform1f',
+    'uniform1i', 'uniform1iv', 'uniform2f', 'uniform3f',
+    'uniform4f', 'uniform4fv', 'bindTexture', 'activeTexture',
+    'bufferSubData'
+]
+DRAW = ['drawElements']
+
+
 def split_csv(file, functionName):
     print 'Reading from "{}"\n'.format(file)
     with open(file, 'rb') as csvfilein:
