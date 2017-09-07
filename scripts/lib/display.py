@@ -29,7 +29,7 @@ def show_chart(file, functionName):
 
 
 def show_bar_chart(xlist, ylist, functionName):
-    fig = plt.figure()
+    fig = plt.figure(figsize=(15, 5))
     ax = fig.add_subplot(111)
     ax.set_title('"{}" elapsed times'.format(functionName))
     ax.set_xlabel('Time from application startup (ms)')
@@ -98,6 +98,7 @@ def display_stacked_bars_groups_1(file, functionName):
     """
     Similar to display_from_csv, but different colors for each group
     """
+    plt.figure(figsize=(15, 5))
     chunks = split_csv(file, functionName, ret=True)
 
     for chunk in chunks:
