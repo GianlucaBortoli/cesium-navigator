@@ -28,8 +28,8 @@ def show_chart(file, functionName):
         return
 
 
-def show_bar_chart(xlist, ylist, functionName):
-    fig = plt.figure(figsize=(15, 5))
+def show_bar_chart(xlist, ylist, functionName, windowTitle):
+    fig = plt.figure(windowTitle, figsize=(15, 5))
     ax = fig.add_subplot(111)
     ax.set_title('"{}" elapsed times'.format(functionName))
     ax.set_xlabel('Time from application startup (ms)')
@@ -98,6 +98,8 @@ def display_stacked_bars_groups(file, functionName):
             top='off',         # ticks along the top edge are off
             labelbottom='off'  # labels along the bottom edge are off
         )
+        fig = plt.gcf()
+        fig.canvas.set_window_title(file)
         plt.show()
 
 
@@ -105,7 +107,7 @@ def display_stacked_bars_groups_1(file, functionName):
     """
     Similar to display_from_csv, but different colors for each group
     """
-    plt.figure(figsize=(15, 5))
+    plt.figure(file, figsize=(15, 5))
     chunks = split_csv(file, functionName, ret=True)
 
     for chunk in chunks:
@@ -184,7 +186,9 @@ def display_from_csv(file, functionName):
                     elapsedTimes.append(elapsedTime)
                     arrivalTimes.append(startTime)
         assert len(arrivalTimes) == len(elapsedTimes)
-        show_bar_chart(arrivalTimes, elapsedTimes, functionName.split('#')[1])
+        show_bar_chart(
+            arrivalTimes, elapsedTimes, functionName.split('#')[1], file
+        )
 
 
 def display_from_json(file, functionName):
@@ -203,4 +207,4 @@ def display_from_json(file, functionName):
                         # tracing clock timestamp of the event
                         timestamps.append(e.get('ts', 0))
         assert len(timestamps) == len(tdurations)
-        show_bar_chart(timestamps, tdurations, functionName)
+        show_bar_chart(timestamps, tdurations, functionName, file)
