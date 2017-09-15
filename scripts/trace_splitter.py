@@ -39,7 +39,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        description='Process CSV file from exported from WTF traces.')
+        description='Process CSV/JSON files from WTF/Chrome traces.')
     parser.add_argument(
         'file', help='The path to the CSV containing the exported WTF trace')
     parser.add_argument(
