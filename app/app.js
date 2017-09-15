@@ -33,14 +33,14 @@ const cameraHeight = 500,
         skyBox: new Cesium.SkyBox({}),
         skyAtmosphere: new Cesium.SkyAtmosphere(),
         // blank terrain
-        //terrainProvider: new Cesium.CesiumTerrainProvider({})
+        // terrainProvider: new Cesium.CesiumTerrainProvider({})
     },
     flyToOpts = {
         duration: 0.1
     };
 let tile3d = null;
 // initial point position & id
-const initialPosition = [-73.93436193466187, 40.73272228590177, 10],
+const initialPosition = [-74.00303453207016, 40.71505038395303, 10],
     pointId = "mypoint";
 // reset view goes to initial position
 const commandOpts = {};
@@ -103,9 +103,9 @@ viewer.camera.flyTo({
     )
 });
 // add point to map
-viewer.entities.add(person);
+viewer.entities.add(point);
 // move viewer to point
-viewer.flyTo(person, flyToOpts).then(() => {
+viewer.flyTo(point, flyToOpts).then(() => {
     // leave some time to 1st camera positioning
     setTimeout(movePoint(), 3000);
 });

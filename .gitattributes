@@ -1,1 +1,2 @@
 traces/*.json filter=lfs diff=lfs merge=lfs -text
+traces/*.csv filter=lfs diff=lfs merge=lfs -text
