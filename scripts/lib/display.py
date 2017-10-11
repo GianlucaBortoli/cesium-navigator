@@ -200,11 +200,11 @@ def display_from_json(file, functionName):
         for key, events in data.iteritems():
             for e in events:
                 if type(e) is dict:
-                    name = e.get('name', '')
-                    if (name == functionName):
-                        # thread clock duration for the operation
-                        tdurations.append(e.get('tdur', 0))
-                        # tracing clock timestamp of the event
-                        timestamps.append(e.get('ts', 0))
+                    # name = e.get('name', '')
+                    # if (name == functionName):
+                    # thread clock duration for the operation
+                    tdurations.append(e.get('tdur', 0) / 1000)  # us -> ms
+                    # tracing clock timestamp of the event
+                    timestamps.append(e.get('ts', 0) / 1000)  # us -> ms
         assert len(timestamps) == len(tdurations)
         show_bar_chart(timestamps, tdurations, functionName, file)
