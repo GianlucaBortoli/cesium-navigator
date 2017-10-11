@@ -39,8 +39,8 @@ const cameraHeight = 500,
         duration: 0.1
     };
 let tile3d = null;
-// initial point position & id
-const initialPosition = [-74.00303453207016, 40.71505038395303, 10],
+// initial random position & id
+const initialPosition = getRandomPosition(),
     pointId = "mypoint";
 // reset view goes to initial position
 const commandOpts = {};
@@ -102,6 +102,9 @@ viewer.camera.flyTo({
         initialPosition[0], initialPosition[1], cameraHeight
     )
 });
+
+add3dTiles();
+
 // add point to map
 viewer.entities.add(point);
 // move viewer to point
@@ -222,3 +225,15 @@ function add3dTiles() {
 function removeAllTiles() {
     tile3d.destroy();
 }
+
+function getRandomInRange(min, max) {
+    return parseFloat((Math.random() * (max - min) + min).toFixed(6));
+}
+
+function getRandomPosition() {
+    let lat = getRandomInRange(-74, -74.004);
+    let long = getRandomInRange(40, 40.8);
+    let rot = getRandomInRange(3, 20);
+    return [lat, long, rot];
+}
+
