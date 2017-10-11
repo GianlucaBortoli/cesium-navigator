@@ -9,7 +9,7 @@ var options = {
     'wtf.trace.provider.webworker': true,
     'wtf.trace.provider.webworker.inject': true
 };
-wtf.trace.prepare(options);
+// wtf.trace.prepare(options);
 
 /*
 * CESIUM APPLICATION
@@ -126,7 +126,7 @@ function movePoint() {
         // send initial position to server
         socket.send(`${initialPosition[0]} ${initialPosition[1]} ${initialPosition[2]}`);
         // start profiling
-        wtf.trace.start();
+        // wtf.trace.start();
     };
 
     socket.onmessage = message => {
@@ -149,8 +149,8 @@ function movePoint() {
     };
 
     socket.onclose = error => {
-        wtf.trace.snapshot('file://trace')
-        wtf.trace.stop();
+        // wtf.trace.snapshot('file://trace')
+        // wtf.trace.stop();
         console.log('WebSocket server connection closed');
     };
 }
